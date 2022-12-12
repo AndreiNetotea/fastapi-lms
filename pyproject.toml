@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fast-api-lms"
+version = "0.1.0"
+description = ""
+authors = ["Andrei Netotea <andrei.netotea@openenergi.com>"]
+readme = "README.md"
+packages = [{include = "fast_api_lms"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+uvicorn = "^0.20.0"
+fastapi = "^0.88.0"
+pydantic = "^1.10.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
