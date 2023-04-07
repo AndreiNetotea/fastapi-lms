@@ -2,6 +2,7 @@ from datetime import datetime
 
 from pydantic import BaseModel
 
+
 class UserBase(BaseModel):
     email: str
     role: int
@@ -9,6 +10,7 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     ...
+
 
 class User(UserBase):
     id: int

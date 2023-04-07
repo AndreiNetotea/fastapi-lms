@@ -7,8 +7,9 @@ from sqlalchemy.orm import relationship
 from ..db_setup import Base
 from .mixins import Timestamp
 
+
 class Role(enum.IntEnum):
-    teacher = 1,
+    teacher = (1,)
     student = 2
 
 
@@ -19,7 +20,6 @@ class User(Timestamp, Base):
     email = Column(String(100), unique=True, index=True, nullable=False)
     role = Column(Enum(Role))
     is_active = Column(Boolean, default=False)
-
 
     profile = relationship("Profile", back_populates="owner", uselist=False)
     student_courses = relationship("StudentCourse", back_populates="student")
