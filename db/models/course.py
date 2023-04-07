@@ -23,7 +23,7 @@ class Course(Timestamp, Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
     created_by = relationship(User)
-    sections = relationship("Section", back_populates="courses", uselist=False)
+    sections = relationship("Section", back_populates="course", uselist=False)
     student_courses = relationship("StudentCourse", back_populates="course")
 
 class Section(Timestamp, Base):

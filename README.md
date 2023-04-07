@@ -25,6 +25,7 @@
 - For the migrations we are using `alembic`, here are some useful commands:
     - `alembic init alembic` - init alembic inside your project
     - `alembic revision --autogenerate` - autogenerate migration files.
+    - `alembic revision --autogenerate -m "Your message"` - autogenerate migration files.
     - `alembic upgrade head` - run migrations.
     - `alembic downgrade base` - undo migrations.
 
