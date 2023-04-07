@@ -13,6 +13,8 @@
 - After you created your virtual environment and `poetry` is installed you should install the dependencies of the project using:
     - `poetry install`
     - `poetry add package-name` to install a new package (eg. `poetry add sqlalchemy`).
+    - `poetry add -D package-name` to install a new package only for dev (eg. `poetry add -D flake8`).
+    - `poetry remove package-name` to install a new package (eg. `poetry remove sqlalchemy`).
 
 
 ## Start the application
@@ -39,4 +41,7 @@
     - `pyenv activate myvirtualenv` activate `myvirtualenv`
     - `pyenv deactivate`
     - `pyenv uninstall my-virtual-env` and `pyenv virtualenv-delete my-virtual-env` for deletion.
+
+##Format & Lint
+    - `pre-commit run --all-files` - format and lint all the files from the project.
 
