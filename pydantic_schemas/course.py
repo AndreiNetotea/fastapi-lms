@@ -13,6 +13,10 @@ class CourseCreate(CourseBase):
     ...
 
 
+class CourseUpdate(CourseBase):
+    ...
+
+
 class Course(CourseBase):
     id: int
 
