@@ -27,7 +27,7 @@ async def get_users(db: AsyncSession, skip: int = 0, limit: int = 100):
 
 
 async def create_user(db: AsyncSession, user: UserCreate):
-    db_user = User(email=user.email, role=user.role)
+    db_user = User(**user.dict())
     db.add(db_user)
     try:
         await db.commit()

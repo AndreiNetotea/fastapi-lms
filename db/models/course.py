@@ -22,10 +22,12 @@ class Course(Timestamp, Base):
     title = Column(String(200), nullable=False)
     description = Column(Text, nullable=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    module_id = Column(Integer, ForeignKey("module.id"), nullable=True)
 
     created_by = relationship(User)
     sections = relationship("Section", back_populates="course", uselist=False)
     student_courses = relationship("StudentCourse", back_populates="course")
+    module = relationship("Module", back_populates="courses")
 
 
 class Section(Timestamp, Base):
