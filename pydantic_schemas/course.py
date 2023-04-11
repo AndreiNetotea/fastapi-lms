@@ -5,8 +5,9 @@ from pydantic import BaseModel
 
 class CourseBase(BaseModel):
     title: str
-    description: Optional[str] = None
     user_id: int
+    description: Optional[str] = None
+    module: Optional[int]
 
 
 class CourseCreate(CourseBase):
